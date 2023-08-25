@@ -41,9 +41,9 @@ const ExpenseForm = (props) => {
         event.preventDefault();
         const expenseData = {
             title: enteredTitle,
-            amount: enteredAmount,
-            date: new Date(enteredDate)
-        }
+            amount: +enteredAmount,
+            date: new Date(enteredDate),
+          }
         // pass expenseData up to NewExpense
         props.onSaveExpenseData(expenseData)
         //reset input fields back to blank (2-way binding)
